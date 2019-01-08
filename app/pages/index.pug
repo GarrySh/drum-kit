@@ -1,0 +1,15 @@
+include ../blocks/drum-kit/drum-kit
+//- include ../blocks/page/page
+
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		a(rel="stylesheet" href="assets/styles/main.css")
+		title JS Drum Kit
+	body.page
+		+drum-kit()
+		//- script(src=config.path.scripts + "/vendor.js")
+		//- script(src=config.path.scripts + "/main.js")

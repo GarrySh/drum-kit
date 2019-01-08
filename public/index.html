@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS Drum Kit</title>
+  </head>
+  <body class="page">
+    <main class="page__main app">
+      <section class="app__controls keys">
+        <div class="keys__item key" data-key="65">
+          <kbd class="key__title">A</kbd><span class="key__description">Clap</span>
+        </div>
+        <div class="keys__item key" data-key="83">
+          <kbd class="key__title">S</kbd><span class="key__description">Hihat</span>
+        </div>
+        <div class="keys__item key" data-key="68">
+          <kbd class="key__title">D</kbd><span class="key__description">Kick</span>
+        </div>
+        <div class="keys__item key" data-key="70">
+          <kbd class="key__title">F</kbd><span class="key__description">Openhat</span>
+        </div>
+        <div class="keys__item key" data-key="71">
+          <kbd class="key__title">G</kbd><span class="key__description">Boom</span>
+        </div>
+        <div class="keys__item key" data-key="72">
+          <kbd class="key__title">H</kbd><span class="key__description">Ride</span>
+        </div>
+        <div class="keys__item key" data-key="74">
+          <kbd class="key__title">J</kbd><span class="key__description">Snare</span>
+        </div>
+        <div class="keys__item key" data-key="75">
+          <kbd class="key__title">K</kbd><span class="key__description">Tom</span>
+        </div>
+        <div class="keys__item key" data-key="76">
+          <kbd class="key__title">L</kbd><span class="key__description">Tink</span>
+        </div>
+      </section>
+    </main>
+
+    <audio data-key="65" src="assets/sounds/clap.wav"></audio>
+    <audio data-key="83" src="assets/sounds/hihat.wav"></audio>
+    <audio data-key="68" src="assets/sounds/kick.wav"></audio>
+    <audio data-key="70" src="assets/sounds/openhat.wav"></audio>
+    <audio data-key="71" src="assets/sounds/boom.wav"></audio>
+    <audio data-key="72" src="assets/sounds/ride.wav"></audio>
+    <audio data-key="74" src="assets/sounds/snare.wav"></audio>
+    <audio data-key="75" src="assets/sounds/tom.wav"></audio>
+    <audio data-key="76" src="assets/sounds/tink.wav"></audio>
+
+    <script src="assets/app.bundle.js"></script>
+  </body>
+</html>

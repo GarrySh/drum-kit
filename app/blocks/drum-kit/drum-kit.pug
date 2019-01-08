@@ -1,0 +1,39 @@
+mixin drum-kit(data)
+  section.drum-kit&attributes(attributes)
+    .drum-kit__key(data-key='65')
+      kbd.drum-kit__key-title A
+      span.drum-kit__key-description Clap
+    .drum-kit__key(data-key='83')
+      kbd.drum-kit__key-title S
+      span.drum-kit__key-description Hihat
+    .drum-kit__key(data-key='68')
+      kbd.drum-kit__key-title D
+      span.drum-kit__key-description Kick
+    .drum-kit__key(data-key='70')
+      kbd.drum-kit__key-title F
+      span.drum-kit__key-description Openhat
+    .drum-kit__key(data-key='71')
+      kbd.drum-kit__key-title G
+      span.drum-kit__key-description Boom
+    .drum-kit__key(data-key='72')
+      kbd.drum-kit__key-title H
+      span.drum-kit__key-description Ride
+    .drum-kit__key(data-key='74')
+      kbd.drum-kit__key-title J
+      span.drum-kit__key-description Snare
+    .drum-kit__key(data-key='75')
+      kbd.drum-kit__key-title K
+      span.drum-kit__key-description Tom
+    .drum-kit__key(data-key='76')
+      kbd.drum-kit__key-title L
+      span.drum-kit__key-description Tink
+	audio(data-key='65', src='assets/sounds/drum-kit__clap.wav')
+	audio(data-key='83', src='assets/sounds/drum-kit__hihat.wav')
+	audio(data-key='68', src='assets/sounds/drum-kit__kick.wav')
+	audio(data-key='70', src='assets/sounds/drum-kit__openhat.wav')
+	audio(data-key='71', src='assets/sounds/drum-kit__boom.wav')
+	audio(data-key='72', src='assets/sounds/drum-kit__ride.wav')
+	audio(data-key='74', src='assets/sounds/drum-kit__snare.wav')
+	audio(data-key='75', src='assets/sounds/drum-kit__tom.wav')
+	audio(data-key='76', src='assets/sounds/drum-kit__tink.wav')
+
