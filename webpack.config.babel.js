@@ -6,7 +6,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default () => ({
   entry: {
-    app: ['./app/pages/index/index.js'],
+    app: ['./app/scripts/index.js'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -15,8 +15,7 @@ export default () => ({
   },
   mode: process.env.NODE_ENV || 'development',
   devServer: {
-    contentBase: './app/assets',
-    port: 9000,
+    contentBase: './app/public',
   },
   module: {
     rules: [
@@ -24,6 +23,17 @@ export default () => ({
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader',
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: './app/public',
+            },
+          },
+        ],
       },
       {
         test: /\.pug$/,
@@ -49,10 +59,30 @@ export default () => ({
           },
         ],
       },
+      {
+        test: /\.(styl|stylus)$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [precss, autoprefixer],
+            },
+          },
+          {
+            loader: 'stylus-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
-    new HtmlWebpackPlugin({ template: './app/pages/index/index.pug' }),
+    new HtmlWebpackPlugin({ template: './app/pages/index.pug', inject: false }),
   ],
 });
