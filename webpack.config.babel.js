@@ -4,7 +4,7 @@ import precss from 'precss';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-export default () => ({
+export default {
   entry: {
     app: ['./app/scripts/index.js'],
   },
@@ -85,4 +85,4 @@ export default () => ({
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({ template: './app/pages/index.pug', inject: false }),
   ],
-});
+};
